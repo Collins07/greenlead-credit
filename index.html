@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GreenLead </title>
+    <link href="index.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+</head>
+<body>
+      
+      <main>
+
+         <!-- Navigation bar -->
+         <nav class="navbar navbar-expand-lg" id="navigation" >
+            <div class="container border-bottom">
+              <a href="index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <img id="logo-img" src="img/GL1.jpg" alt="" class="bi me-1" width="70" height="70" role="img" >
+              <span id="logo" class="">GreenLead</span>
+              </a>
+              
+              <button style="color: green;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span  class="navbar-toggler-icon"></span>
+              </button>
+              <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-8"></div>
+    
+                    <div class="col-4 navbar-collapse collapse"  id="navbarColor02">
+
+  
+                      
+                      <ul class="nav nav-pills">
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle show " id="drop" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Explore</a>
+                          <div id="glass" class="dropdown-menu hide" data-popper-placement="bottom-start" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 42px); width: 220px;">
+                            
+                            <a class="dropdown-item" href="html/login.html">Login</a>
+                            <a class="dropdown-item" href="html/register.html">Register</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 id="tree">GreenLead Credits</h6>
+                            <a class="dropdown-item" href="html/esg.html">Credit History</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+               
+              </div>
+              
+            </div>
+          </nav>
+    
+
+
+        <!-- hero -->
+
+        <div style="background-color: white;" id="hero" class="container col-xxl-12 mt-1">
+            <div class="row flex-lg-row-reverse align-items-center g-2 py-2">
+              <div class="col-10 col-sm-8 col-lg-5">
+                 <img src="img/industry.jpg" class="img-fluid" alt="">
+               
+              </div> 
+              <div class="col-lg-7">
+                  <h1 class=" fw-bold lh-3 mb-2"> 
+                    <span class="releaf">Support Reforestation and Afforestation and Earn Eco-Credits with GreenLead</span>  
+                  </h1>
+                  <p class="mt-4">GreenLead enables you to contribute to reforestation and afforestation projects, while earning credits for EVERY contribution.  
+                    Your eco-credits can be redeemed for eco-friendly services like green transport with <span class="fw-bold">Super Metro and Citi Hoppa EVs</span>, or a visit at the <span class="fw-bold">Karura Forest</span> while supporting a greener and more sustainable future. Join us in making a positive environmental impact, where your contributions directly help plant trees and restore forests.
+                    </p>
+                 <!-- Contribute Button -->
+        <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#contributeModal">Contribute</button>
+
+        <!-- Redeem Credits Button -->
+        <button class="btn btn-secondary mt-3" data-bs-toggle="modal" data-bs-target="#redeemModal">Redeem Credits</button>
+
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+
+
+                                <!-- Contribute Modal -->
+            <div class="modal fade" id="contributeModal" tabindex="-1" aria-labelledby="contributeModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="contributeModalLabel">Contribute to Reforestation</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <p>Go to MPESA, Lipa na Mpesa option then select Paybill and enter the paybill number <strong>12345</strong>.</p>
+                          <p>For the account number, enter your full name. Thank you for supporting reforestation efforts!</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+            <!-- Redeem Modal -->
+            <div class="modal fade" id="redeemModal" tabindex="-1" aria-labelledby="redeemModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="redeemModalLabel">Redeem Credits</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <form>
+                              <div class="form-group">
+                                  <label for="redeemAmount">Enter the amount you want to redeem (Ksh):</label>
+                                  <input type="number" id="redeemAmount" class="form-control" placeholder="Enter amount" oninput="calculateCredits()">
+                              </div>
+                              <p class="mt-2">Credits to be transferred = <span id="creditsToTransfer" class="fw-bold">0.00</span></p>
+                              <div class="form-group">
+                                  <label for="recipientAccount">Enter the account number you want to transfer credits to:</label>
+                                  <input type="text" id="recipientAccount" class="form-control" placeholder="Enter account number (e.g., GL300)">
+                              </div>
+                          </form>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-success" onclick="transferCredits()">Transfer</button>
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+          
+          <div  class="container col-xxl-12 mt-2">
+            <div class="row py-3 g-2">
+              <div id="wave" class="card border-success mb-3">               
+                <div class="card-body">
+                  <h4 id="title" class="card-title mb-2"></h4>
+                  <p> <span class=" fw-bold releaf1">GreenLead</span>
+                     
+                    
+                  </p>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+
+         
+     
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="index.js"></script>
+</body>
+</html>

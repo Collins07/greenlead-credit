@@ -1,0 +1,55 @@
+.history-section {
+    padding: 40px;
+    background-color: #f8f9fa;
+}
+
+.history-card {
+    margin-bottom: 20px;
+    background-color: rgb(222, 238, 222);
+}
+
+.history-date {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.credits {
+    font-weight: bold;
+    color: green;
+}
+
+.deducted-credits {
+    font-weight: bold;
+    color: red;
+}
+
+.balance-credits {
+    font-weight: bold;
+    color: blue;
+}
+
+/* New header section */
+.account-summary {
+    margin-bottom: 30px;
+}
+
+.account-summary p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.account-summary .balance-credits {
+    font-size: 1.4rem;
+    color: #28a745;
+}
+
+.account-summary .trees-planted {
+    font-size: 1.4rem;
+    color: #6c757d;
+}
+
+#credit-title{ 
+    height: 50px;
+    color: white;
+    background-color: green;
+}
