@@ -71,7 +71,7 @@
                     <span class="releaf">Support Reforestation and Afforestation and Earn Eco-Credits with GreenLead</span>  
                   </h1>
                   <p class="mt-4">GreenLead enables you to contribute to reforestation and afforestation projects, while earning credits for EVERY contribution.  
-                    Your eco-credits can be redeemed for eco-friendly services like green transport with <span class="fw-bold">Super Metro and Citi Hoppa EVs</span>, or a visit at the <span class="fw-bold">Karura Forest</span> while supporting a greener and more sustainable future. Join us in making a positive environmental impact, where your contributions directly help plant trees and restore forests.
+                    Your eco-credits can be redeemed for eco-friendly services like green transport with <span class="fw-bold">EV commutter buses</span>, or a nature walk in any of the parks while supporting a greener and more sustainable future. Join us in making a positive environmental impact, where your contributions directly help plant trees and restore forests.
                     </p>
                  <!-- Contribute Button -->
         <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#contributeModal">Contribute</button>
@@ -112,19 +112,19 @@
               <div class="modal-dialog">
                   <div class="modal-content">
                       <div class="modal-header">
-                          <h5 class="modal-title" id="redeemModalLabel">Redeem Credits</h5>
+                          <p class="modal-title" id="redeemModalLabel">Your eco-credit balance is <span class="greener">  2.51  </span></p>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
                           <form>
                               <div class="form-group">
-                                  <label for="redeemAmount">Enter the amount you want to redeem (Ksh):</label>
-                                  <input type="number" id="redeemAmount" class="form-control" placeholder="Enter amount" oninput="calculateCredits()">
+                                  <label for="redeemAmount">Amount (Ksh) you want to redeem for service/product:</label>
+                                  <input type="number" id="redeemAmount" class="form-control" placeholder="Enter amount in Ksh" oninput="calculateCredits()">
                               </div>
-                              <p class="mt-2">Credits to be transferred = <span id="creditsToTransfer" class="fw-bold">0.00</span></p>
+                              <p class="mt-2">Credits to be transferred = <span id="creditsToTransfer" class="fw-bold fs-5">0.00</span></p>
                               <div class="form-group">
                                   <label for="recipientAccount">Enter the account number you want to transfer credits to:</label>
-                                  <input type="text" id="recipientAccount" class="form-control" placeholder="Enter account number (e.g., GL300)">
+                                  <input type="text" id="recipientAccount" class="form-control " placeholder="Enter account number (e.g., GL300)">
                               </div>
                           </form>
                       </div>
