@@ -813,3 +813,13 @@ section.how-it-works ul.nacc li p {
   color: white;
   background-color: green;
 }
+#redeemModalLabel{
+  font-size: 22px;
+  font-weight: bold;
+
+}
+.greener{
+  color: white;
+  background-color: #008000;
+  
+}
